@@ -1,0 +1,103 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* MAIN COLORS */
+  --blue-bg: #0A1D37;         /* Dark blue background */
+  --blue-accent: #1E40AF;     /* Mid blue */
+  --orange-accent: #F97316;   /* Orange for highlights */
+  --text-white: #FFFFFF;      /* White text */
+
+  /* LIGHT MODE */
+  --background: var(--blue-bg);
+  --foreground: var(--text-white);
+  --card: var(--blue-accent);
+  --card-foreground: var(--text-white);
+  --popover: var(--blue-bg);
+  --popover-foreground: var(--text-white);
+  --primary: var(--orange-accent);
+  --primary-foreground: var(--text-white);
+  --secondary: #1D4ED8;
+  --secondary-foreground: var(--text-white);
+  --muted: #1E293B;
+  --muted-foreground: var(--text-white);
+  --accent: var(--orange-accent);
+  --accent-foreground: var(--text-white);
+  --destructive: #DC2626;
+  --destructive-foreground: var(--text-white);
+  --border: rgba(255, 255, 255, 0.2);
+  --input: #1E293B;
+  --input-background: #0F172A;
+  --switch-background: #334155;
+  --font-weight-medium: 700;
+  --font-weight-normal: 600;
+  --ring: var(--orange-accent);
+
+  /* Shadows and Radius */
+  --shadow-card: 0 4px 12px rgba(249, 115, 22, 0.3);
+  --radius: 10px;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: var(--text-white);
+  --card: #1E293B;
+  --card-foreground: var(--text-white);
+  --popover: #0F172A;
+  --popover-foreground: var(--text-white);
+  --primary: #FB923C;
+  --primary-foreground: var(--text-white);
+  --secondary: #2563EB;
+  --secondary-foreground: var(--text-white);
+  --muted: #1E293B;
+  --muted-foreground: var(--text-white);
+  --accent: #FB923C;
+  --accent-foreground: var(--text-white);
+  --border: rgba(255, 255, 255, 0.25);
+  --ring: #FB923C;
+  --font-weight-medium: 700;
+  --font-weight-normal: 600;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --radius-md: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-bold;
+  }
+
+  button {
+    background-color: var(--primary);
+    color: var(--text-white);
+    font-weight: 700;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #ea580c;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, label {
+    color: var(--text-white);
+    font-weight: 700;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
