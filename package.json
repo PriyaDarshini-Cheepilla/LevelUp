@@ -57,7 +57,8 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "preview": "vite preview"
       },
       "description": "This is a code bundle for AI Career Guidance App. The original project is available at https://www.figma.com/design/Ki2Owq8B7dj5xguS4fxqwK/AI-Career-Guidance-App.",
       "main": "index.js",
